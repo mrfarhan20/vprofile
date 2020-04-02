@@ -1,0 +1,15 @@
+@Library('Test-lib@master')_
+pipeline {
+    agent any
+
+    stages {
+        stage("Git Checkout"){
+            steps {
+            gitcheckout(
+                branch: "master",
+                url: "https://github.com/mrfarhan20/vprofile"
+            )  
+            }
+        }
+    }    
+}    
